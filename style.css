@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Square');
+
+/* - ALL PAGES - */
+body {
+    background-color: #01579B;
+    margin: 0;
+    font-family: 'Nova Square', sans-serif;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Nova Square', sans-serif;
+}
+
+/* - NAVBAR - */
+div.navbar {
+    background-color: #212121;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 80px;
+}
+
+a.nav-link {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+h1.nav-title {
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+
+a.nav-link, h1.nav-title {
+    font-family: Nova Square, sans-serif;
+    color: white;
+    margin-left: 10px;
+}
+
+a.nav-link:hover, .active {
+    border-bottom: 2px solid #007eff;
+    border-radius: 1px;
+}
+
+.nav-links {
+    bottom: 2px;
+    position: absolute;
+}
+
+/* - CANZONI - */
+
+/* ALBUM */
+
+div.song-album {
+    background-color: #212121;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.26) 0 0 6px, rgba(0, 0, 0, 0.20) 0 0 10px;
+    color: #ffffff;
+}
+
+div.song-album-head {
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+button.song-album-button {
+    margin-left: 10px;
+    margin-top: 36px;
+    alignment: center;
+}
+
+h1.song-album-title {
+    margin: 30px;
+    padding: 10px;
+}
+
+div.song-album-none {
+    display: none;
+}
+
+/* DIV CANZONI */
+
+div.song {
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 250px auto auto auto;
+}
+
+audio.song-audio {
+    box-shadow: rgba(0, 0, 0, 0.26) 0 0 6px, rgba(0, 0, 0, 0.20) 0 0 10px;
+    border-radius: 100px;
+    height: 50px;
+}
+
+h2.song-title {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+div.song-body {
+    display: inline-flex;
+    margin: 10px;
+}
+
+/* BOTTONI */
+
+button.song-button-downl, .song-album-button {
+    background: linear-gradient(190deg, #00C853, #07a661);
+}
+
+button.song-button-testo {
+    background: linear-gradient(0deg, #007EFE, hsla(200, 159%, 37%, 1));
+}
+
+button.song-button-downl, .song-album-button, .song-button-testo {
+    border-radius: 100px;
+    border: none;
+    height: 50px;
+    width: 170px;
+    color: #ffffff;
+    font-family: 'Nova Square', sans-serif;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.26) 0 0 6px, rgba(0, 0, 0, 0.20) 0 0 10px;
+    margin-left: 10px;
+    transition: box-shadow 200ms;
+}
+
+button.song-button-testo, .song-button-downl:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+
+}
+
+/* - VIDEO - */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
+
+}
+
+.video-grid > .last {
+    grid-column: span 5;
+    grid-row: span 2;
+    background-color: #212121;
+}
+
+.video-grid > .right {
+    grid-column: span 3;
+}
+
+.video-grid > div {
+    grid-column: span 2;
+    background: none;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    transition: box-shadow 200ms;
+}
+
+.video-grid > div:nth-child(odd) {
+    background: none;
+}
+
+.video-grid > div:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
